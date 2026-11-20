@@ -1,0 +1,47 @@
+{
+  "name": "pi-lockbox",
+  "version": "0.1.0",
+  "description": "Give pi secrets without sending them to the model: a masked secret prompt, a paste guard, and output redaction",
+  "author": "Azmain Adel",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azmainadel/pi-lockbox.git"
+  },
+  "homepage": "https://github.com/azmainadel/pi-lockbox#readme",
+  "bugs": {
+    "url": "https://github.com/azmainadel/pi-lockbox/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "secrets",
+    "redaction",
+    "security"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.19"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "scripts": {
+    "test": "node --test \"tests/*.test.ts\"",
+    "link-types": "sh scripts/link-pi-types.sh",
+    "typecheck": "tsc --noEmit -p ."
+  }
+}
